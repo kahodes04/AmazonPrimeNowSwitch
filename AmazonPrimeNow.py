@@ -7,6 +7,7 @@ import time
 import bs4
 import requests
 import winsound
+import webbrowser
 
 class WindowsBalloonTip:
     def __init__(self):
@@ -49,6 +50,10 @@ class WindowsBalloonTip:
         PostQuitMessage(0) # Terminate the app.
 
 with requests.session() as c:
+    w = WindowsBalloonTip()
+    openbrowserneon = False;
+    openbrowsergray = False;
+
     sleeppart = True
     zippart = True
     while(sleeppart):
@@ -77,18 +82,27 @@ with requests.session() as c:
         for item in filtered:
             if(item.text.strip() == "Nintendo Switch with Neon Blue and Neon Red Joy-Con"):
                 neon = "Neon - IN STOCK!"
+                if openbrowserneon == False:
+                    webbrowser.open("https://primenow.amazon.com/dp/B01MUAGZ49", new=0, autoraise=True);
+                    openbrowserneon = True
                 break
+            openbrowserneon = False
             neon = "Neon - No Stock"
         for item in filtered:
             if (item.text.strip() == "Nintendo Switch with Gray Joy-Con"):
                 gray = "Gray - IN STOCK!"
+                if openbrowsergray == False:
+                    webbrowser.open("https://primenow.amazon.com/gp/product/B01LTHP2ZK", new=0, autoraise=True);
+                    openbrowsergray = True
                 break
+            openbrowsergray = False
             gray = "Gray - No Stock"
         if (neon == "Neon - IN STOCK!" or gray == "Gray - IN STOCK!"):
             winsound.Beep(800, 250)
             winsound.Beep(800, 250)
             winsound.Beep(800, 250)
             w.ShowWindow("Amazon Prime Now", neon + '\n' + gray);
+
 
         ts = time.time()
         st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
