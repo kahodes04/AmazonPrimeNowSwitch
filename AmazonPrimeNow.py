@@ -51,6 +51,7 @@ class WindowsBalloonTip:
 
 with requests.session() as c:
     w = WindowsBalloonTip()
+    print("APNSS. vers 1.0.2")
     openbrowserneon = False;
     openbrowsergray = False;
 
