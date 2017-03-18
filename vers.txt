@@ -1,0 +1,3 @@
+1.0 -    beep to notify
+1.0.1 - beep, notification to notify
+1.0.2 - beep, notification, open browser page to notify
