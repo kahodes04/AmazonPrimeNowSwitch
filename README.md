@@ -11,7 +11,3 @@ The Amazon Prime Now website with the corresponding item will be opened upon sto
 Notifications for Windows are added. The script icon is not displayed yet due to conflicts with the python freezer so the default one is used instead.
 ## Credits
 Thanks to [wontocc](https://gist.github.com/wontoncc) for his help with the WindowsBalloonTip class.
-## Donations
-If you were able to find a system using this script and you want to contribute you could help by donating!
-
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Y9SMFS4C2AZXS&lc=US&item_name=Podolscripts&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
